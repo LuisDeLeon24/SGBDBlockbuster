@@ -25,10 +25,16 @@ import org.grupo5.webapp.service.EmpleadoService;
 public class EmpleadoServlet extends HttpServlet {
     private EmpleadoService empleadoService;
     @Override
-    protected void doGet (HttpServletRequest req, HttpServletResponse resq) throws ServletException, IOException {
+    public void init() throws ServletException{
+        super.init();
+        this.empleadoService = new EmpleadoService();
+    }
+    
+    @Override
+    protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Empleado>empleados = empleadoService.listarempleados();
         req.setAttribute("empleados", empleados);
-        req.getRequestDispatcher(".listar-Empleados/listar-Empleados-jsp").forward(req, resq);
+        req.getRequestDispatcher("./Empleados/listar-Empleados/listar-Empleados.jsp").forward(req, resp);
     }
     
     @Override

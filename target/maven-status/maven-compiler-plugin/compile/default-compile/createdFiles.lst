@@ -1,4 +1,3 @@
-Main.class
 org\grupo5\webapp\model\Empleado.class
 org\grupo5\webapp\model\Tienda.class
 org\grupo5\webapp\service\EmpleadoService.class

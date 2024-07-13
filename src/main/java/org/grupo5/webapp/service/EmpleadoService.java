@@ -22,7 +22,7 @@ public class EmpleadoService implements IEmpleadoService {
 
     @Override
     public List<Empleado> listarempleados(){
-        return em.createQuery("SELECT e FROM Empleados e", Empleado.class).getResultList();
+        return em.createQuery("SELECT e FROM Empleado e", Empleado.class).getResultList();
     }
 
     @Override
@@ -37,6 +37,11 @@ public class EmpleadoService implements IEmpleadoService {
 
     @Override
     public Empleado buscarEmpleadoProId(int empleadoId) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void editarEmpleado(Empleado empleado) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

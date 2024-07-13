@@ -12,6 +12,7 @@ import org.grupo5.webapp.model.Empleado;
  * @author informatica
  */
 public interface IEmpleadoService {
+    
     public List<Empleado> listarempleados();
     
     public void agregarEmpleado(Empleado empleado);
@@ -19,4 +20,6 @@ public interface IEmpleadoService {
     public void eliminarEmpleado(int empleadoId);
     
     public Empleado buscarEmpleadoProId(int empleadoId);
+    
+    public void editarEmpleado(Empleado empleado);
 }
