@@ -38,7 +38,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./pelicula-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
@@ -102,7 +102,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./cliente-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
