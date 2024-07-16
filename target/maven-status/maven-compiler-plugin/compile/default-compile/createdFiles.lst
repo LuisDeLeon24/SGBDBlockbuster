@@ -1,2 +1,5 @@
-org\grupo5\webapp\blockbuster\resources\JakartaEE10Resource.class
-org\grupo5\webapp\blockbuster\JakartaRestConfiguration.class
+org\grupo5\webapp\servlet\TiendaServlet.class
+org\grupo5\webapp\service\ITiendaService.class
+org\grupo5\webapp\service\TiendaService.class
+org\grupo5\webapp\model\Tienda.class
+org\grupo5\webapp\util\JPAUtil.class
