@@ -1,9 +1,9 @@
+org\grupo5\webapp\service\IPeliculaService.class
+org\grupo5\webapp\service\ClienteService.class
 org\grupo5\webapp\servlet\PeliculaServlet.class
 org\grupo5\webapp\servlet\ClienteServlet.class
 org\grupo5\webapp\service\PeliculaService.class
 org\grupo5\webapp\model\Pelicula.class
 org\grupo5\webapp\service\IClienteService.class
 org\grupo5\webapp\model\Cliente.class
-org\grupo5\webapp\service\IPeliculaService.class
-org\grupo5\webapp\service\ClienteService.class
 org\grupo5\webapp\util\JPAUtil.class
