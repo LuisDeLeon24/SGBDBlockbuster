@@ -1,7 +1,9 @@
 
 
+
 <%@page import= "java.util.List" %>
 <%@page import= "org.grupo5.webapp.model.Empleado" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -69,7 +71,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./membresia-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
