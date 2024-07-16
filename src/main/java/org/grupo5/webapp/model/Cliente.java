@@ -75,6 +75,7 @@ public class Cliente {
     public void setMembresiaId(long membresiaId) {
         this.membresiaId = membresiaId;
     }
+    
 
     @Override
     public String toString() {

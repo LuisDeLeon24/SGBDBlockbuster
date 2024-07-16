@@ -29,7 +29,7 @@ public class ClienteServlet extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Cliente> clientes = clienteService.listarClientes();
         req.setAttribute("clientes", clientes);
-        req.getRequestDispatcher("./lista-clientes/lista-clientes.jsp").forward(req,resp);
+        req.getRequestDispatcher("./cliente/lista-clientes/lista-clientes.jsp").forward(req,resp);
     }
 
     @Override

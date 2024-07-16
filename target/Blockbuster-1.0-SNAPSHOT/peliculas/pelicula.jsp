@@ -31,7 +31,7 @@
                                 <a class="nav-link" href="./formulario-peliculas/formulario-peliculas.jsp">Formulario de Peliculas</a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="./pelicula-servlet">Lista de Peliculas</a>
+                                    <a class="nav-link" href="../pelicula-servlet">Lista de Peliculas</a>
                             </li>
                         </ul>
                     </div>

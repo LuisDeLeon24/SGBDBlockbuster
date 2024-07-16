@@ -32,7 +32,7 @@ public class PeliculaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Pelicula> peliculas = peliculaService.listarPeliculas();
         req.setAttribute("peliculas", peliculas);
-        req.getRequestDispatcher("./lista-peliculas/lista-peliculas.jsp").forward(req,resp);
+        req.getRequestDispatcher("./peliculas/lista-peliculas/lista-peliculas.jsp").forward(req,resp);
     }
 
     @Override
@@ -45,8 +45,8 @@ public class PeliculaServlet extends HttpServlet {
 
         datosPelicula.add("Titulo : " + titulo);
         datosPelicula.add("Marca : " + genero);
-        datosPelicula.add("Descripcion : " + estreno);
-        datosPelicula.add("Precio: " + "Q." + director);
+        datosPelicula.add("Estreno: " + estreno);
+        datosPelicula.add("Director: " + director);
 
         String msj = null;
 

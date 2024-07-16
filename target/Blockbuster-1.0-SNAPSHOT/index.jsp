@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 12 jul. 2024, 2:34:40 p. m.
-    Author     : senor
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
