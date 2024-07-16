@@ -1,8 +1,4 @@
-<%-- 
-    Document   : listar-Empleados
-    Created on : 12/07/2024, 13:26:59
-    Author     : informatica
---%>
+
 
 <%@page import= "java.util.List" %>
 <%@page import= "org.grupo5.webapp.model.Empleado" %>
@@ -41,7 +37,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./pelicula-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
@@ -105,7 +101,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./cliente-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
