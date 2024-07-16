@@ -6,7 +6,7 @@
         <properties>
             <!--Configuracion inicail del Hibernate-->
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SGBDProductos?serverTimezone=GMT-6" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/SGBDBlockbuster?serverTimezone=GMT-6" />
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.password" value="admin" />   <!--De esta linea para arriba es fijo para conectar las credenciales-->
             <!--Propertyes Opcionales-->
