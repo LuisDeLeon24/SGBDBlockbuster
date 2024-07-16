@@ -1,2 +1,5 @@
-org\grupo5\webapp\blockbuster\resources\JakartaEE10Resource.class
-org\grupo5\webapp\blockbuster\JakartaRestConfiguration.class
+org\grupo5\webapp\model\Membresia.class
+org\grupo5\webapp\service\MembresiaService.class
+org\grupo5\webapp\servlet\MembresiaServlet.class
+org\grupo5\webapp\service\IMembresiaService.class
+org\grupo5\webapp\util\JPAUtil.class

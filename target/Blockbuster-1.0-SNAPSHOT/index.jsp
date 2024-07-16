@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 12 jul. 2024, 2:34:40 p. m.
-    Author     : senor
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -70,7 +64,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Listar</a></li>
+                                    <li><a class="dropdown-item" href="./membresia-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
