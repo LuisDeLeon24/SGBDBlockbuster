@@ -155,10 +155,10 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">nombre Empleado</th>
-                <th scope="col">Puesto de trabajo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Puesto de Trabajo</th>
                 <th scope="col">SALARIO</th>
-                <th scope="col">Tiendo donde trabaja</th>
+                <th scope="col">Tiendo Asignada</th>
               </tr>
             </thead>
             <tbody>
