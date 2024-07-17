@@ -79,7 +79,7 @@
 
         </div>
         <div class="container mt-3 form-container">
-            <form action="/SGBDProductos/producto-servlet" method="post" endtype="multipart/form-data">
+            <form action="/Blockbuster/pelicula-servlet" method="post" endtype="multipart/form-data">
                 <div class="form-floating mb-3">
                     <input type="nombre" class="form-control" id="titulo" name="titulo" placeholder="titulo">
                     <label for="floatingInput">Titulo De La Pelicula</label>

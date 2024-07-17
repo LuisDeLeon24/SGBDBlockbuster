@@ -1,19 +1,19 @@
-
 package org.grupo5.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.grupo5.webapp.model.Pelicula;
 import org.grupo5.webapp.util.JPAUtil;
 
-public class PeliculaService implements IPeliculaService{
-    
+public class PeliculaService implements IPeliculaService {
+
     private EntityManager em;
-    
-    public PeliculaService(){
+
+    public PeliculaService() {
         this.em = JPAUtil.getEntityManager();
     }
-    
+
     @Override
     public List<Pelicula> listarPeliculas() {
         return em.createQuery("SELECT p FROM Pelicula p", Pelicula.class).getResultList();
@@ -21,7 +21,17 @@ public class PeliculaService implements IPeliculaService{
 
     @Override
     public void agregarPelicula(Pelicula pelicula) {
-        em.persist(pelicula);
+        EntityTransaction transaction = em.getTransaction();
+        try {
+            transaction.begin();
+            em.persist(pelicula);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -37,5 +47,5 @@ public class PeliculaService implements IPeliculaService{
     @Override
     public void editarPelicula(Pelicula pelicula) {
     }
-    
+
 }

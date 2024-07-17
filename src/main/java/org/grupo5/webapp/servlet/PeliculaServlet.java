@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package org.grupo5.webapp.servlet;
 
 import jakarta.servlet.ServletException;
@@ -37,6 +34,14 @@ public class PeliculaServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarPelicula(req, resp);
+        }else{
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+        
         List<String> datosPelicula = new ArrayList<>();
         String titulo = req.getParameter("titulo");
         String genero = req.getParameter("genero");
@@ -63,7 +68,19 @@ public class PeliculaServlet extends HttpServlet {
         req.setAttribute("mensaje", msj);
         req.setAttribute("datosPelicula", datosPelicula);
 
-        getServletContext().getRequestDispatcher("/formulario-peliculas/formulario-peliculas.jsp").forward(req, resp);
+        //getServletContext().getRequestDispatcher("/peliculas/formulario-peliculas/formulario-peliculas.jsp").forward(req, resp);
+
+    }
+    
+    public void agregarPelicula(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String titulo = req.getParameter("titulo");
+        String genero = req.getParameter("genero");
+        String estreno = req.getParameter("estreno");
+        String director = req.getParameter("director");
+        
+        peliculaService.agregarPelicula(new Pelicula(titulo, genero, estreno, director));
+        
+        resp.sendRedirect(req.getContextPath()+ "/");
 
     }
 
