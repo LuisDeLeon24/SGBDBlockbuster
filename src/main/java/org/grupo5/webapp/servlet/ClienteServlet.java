@@ -34,6 +34,14 @@ public class ClienteServlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarCliente(req, resp);
+        }else{
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+        
         List<String> datosCliente = new ArrayList<>();
         String nombreCliente = req.getParameter("nombreCliente");
         String telefono = req.getParameter("telefono");
@@ -60,7 +68,19 @@ public class ClienteServlet extends HttpServlet{
         req.setAttribute("mensaje", msj);
         req.setAttribute("datosCliente", datosCliente);
 
-        getServletContext().getRequestDispatcher("/formulario-clientes/formulario-clientes.jsp").forward(req, resp);
+        //getServletContext().getRequestDispatcher("/formulario-clientes/formulario-clientes.jsp").forward(req, resp);
+
+    }
+    
+    public void agregarCliente(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String nombre = req.getParameter("nombreCliente");
+        String telefono = req.getParameter("telefono");
+        String genero = req.getParameter("generoFavorito");
+        int membresiaId = Integer.parseInt(req.getParameter("membresiaId"));
+        
+        clienteService.agregarCliente(new Cliente(nombre, telefono, genero, membresiaId));
+        
+        resp.sendRedirect(req.getContextPath()+ "/");
 
     }
 

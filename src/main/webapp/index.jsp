@@ -94,7 +94,7 @@
                                     Clientes
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                    <li><a class="dropdown-item" href="./cliente/formulario-clientes/formulario-clientes.jsp">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="./cliente-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>

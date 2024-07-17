@@ -68,7 +68,10 @@
 
             </div>
             <div class="container mt-3 form-container">
-                <form action="/SGBDProductos/producto-servlet" method="post" endtype="multipart/form-data">
+                <form action="/Blockbuster/cliente-servlet" method="post" endtype="multipart/form-data">
+                    <br>
+                    <br>
+                    <br>
                     <div class="form-floating mb-3">
                         <input type="nombre" class="form-control" id="titulo" name="nombreCliente" placeholder="nombreCliente">
                         <label for="floatingInput">Nombre</label>
@@ -85,11 +88,17 @@
                         <textarea class="form-control" placeholder="Leave a comment here" id="membresiaId" name="membresiaId"></textarea>
                         <label for="floatingTextarea">Membresia</label>
                     </div>
+                    
+                    <br>
+                    <br>
+                    <br>
                     <div>
                         <button type="submit" class="btn btn-dark">Ingresar</button>
                     </div>
                 </form>
             </div>
+
+
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
