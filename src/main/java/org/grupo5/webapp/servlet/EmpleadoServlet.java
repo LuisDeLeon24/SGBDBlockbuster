@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.grupo5.webapp.model.Empleado;
+import org.grupo5.webapp.model.Tienda;
 import org.grupo5.webapp.service.EmpleadoService;
 
 /**
@@ -60,5 +61,11 @@ public class EmpleadoServlet extends HttpServlet {
         datosEmpleado.add("tiendaId: " + tiendaId);
         }
         
+    }
+    public void agregarEmpleado(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        String nombre = req.getParameter("nombreEmpleado");
+        String puesto = req.getParameter("puestoEmpleado");
+        double salario = Double.parseDouble(req.getParameter("salario"));
+        //Tienda tienda = new (getParameter("tiendaId"));//
     }
 }
