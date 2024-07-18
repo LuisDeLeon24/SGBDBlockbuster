@@ -11,6 +11,7 @@ org\grupo5\webapp\servlet\ClienteServlet.class
 org\grupo5\webapp\service\PeliculaService.class
 org\grupo5\webapp\servlet\TiendaServlet.class
 org\grupo5\webapp\model\Membresia.class
+org\grupo5\webapp\servlet\membresiaService.class
 org\grupo5\webapp\model\Pelicula.class
 org\grupo5\webapp\service\IClienteService.class
 org\grupo5\webapp\service\TiendaService.class

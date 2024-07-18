@@ -54,7 +54,7 @@
                             <th scope="col">Telefono</th>
                             <th scope="col">Genero Favorito</th>
                             <th scope="col">Membresia</th>
-                        </tr>
+                        </tr> 
                     </thead>
                     <tbody>
                         <%List<Cliente> clientes = (List) request.getAttribute("clientes"); %>

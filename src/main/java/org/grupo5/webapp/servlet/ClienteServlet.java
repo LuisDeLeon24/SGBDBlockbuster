@@ -1,4 +1,3 @@
-
 package org.grupo5.webapp.servlet;
 
 import jakarta.servlet.ServletException;
@@ -12,36 +11,47 @@ import java.util.ArrayList;
 import java.util.List;
 import org.grupo5.webapp.model.Cliente;
 import org.grupo5.webapp.service.ClienteService;
+import org.grupo5.webapp.service.MembresiaService;
 
 @WebServlet("/cliente-servlet")
 @MultipartConfig
-public class ClienteServlet extends HttpServlet{
-   
+public class ClienteServlet extends HttpServlet {
+
     private ClienteService clienteService;
-    
+
     @Override
-    public void init() throws ServletException{
+    public void init() throws ServletException {
         super.init();
         this.clienteService = new ClienteService();
     }
     
+  
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Cliente> clientes = clienteService.listarClientes();
-        req.setAttribute("clientes", clientes);
-        req.getRequestDispatcher("./cliente/lista-clientes/lista-clientes.jsp").forward(req,resp);
+        String parametro = req.getParameter("parametro");
+
+        if (parametro.equals("1")) {
+            List<Cliente> clientes = clienteService.listarClientes();
+            req.setAttribute("clientes", clientes);
+            req.getRequestDispatcher("./cliente/formulario-clientes/formulario-clientes.jsp").forward(req, resp);
+        } else if (parametro.equals("2")) {
+            List<Cliente> clientes = clienteService.listarClientes();
+            req.setAttribute("clientes", clientes);
+            req.getRequestDispatcher("./cliente/lista-clientes/lista-clientes.jsp").forward(req, resp);
+        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getPathInfo();
-        
-        if(path == null || path.equals("/")){
+
+        if (path == null || path.equals("/")) {
             agregarCliente(req, resp);
-        }else{
+        } else {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
         }
-        
+
         List<String> datosCliente = new ArrayList<>();
         String nombreCliente = req.getParameter("nombreCliente");
         String telefono = req.getParameter("telefono");
@@ -69,21 +79,18 @@ public class ClienteServlet extends HttpServlet{
         req.setAttribute("datosCliente", datosCliente);
 
         //getServletContext().getRequestDispatcher("/formulario-clientes/formulario-clientes.jsp").forward(req, resp);
-
     }
-    
+
     public void agregarCliente(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String nombre = req.getParameter("nombreCliente");
         String telefono = req.getParameter("telefono");
         String genero = req.getParameter("generoFavorito");
         int membresiaId = Integer.parseInt(req.getParameter("membresiaId"));
-        
+
         clienteService.agregarCliente(new Cliente(nombre, telefono, genero, membresiaId));
-        
-        resp.sendRedirect(req.getContextPath()+ "/");
+
+        resp.sendRedirect(req.getContextPath() + "/");
 
     }
 
-
-   
 }

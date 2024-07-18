@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="org.grupo5.webapp.model.Cliente"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -88,7 +90,18 @@
                         <textarea class="form-control" placeholder="Leave a comment here" id="membresiaId" name="membresiaId"></textarea>
                         <label for="floatingTextarea">Membresia</label>
                     </div>
-                    
+
+                    <div class="form-floating">
+                        <select class="form-select" id="membresiaId" aria-label="Floating label select example">
+                            <option selected>Membresias</option>
+                            <%List<Cliente> clientes = (List) request.getAttribute("clientes"); %>
+                            <% for (Cliente cliente : clientes) {%>
+                            <option><%=cliente.getNombreCliente()%></option>           
+                            <% }%>
+                        </select>
+                        <label for="floatingSelect">Seleccione su membresia</label>
+                    </div>
+
                     <br>
                     <br>
                     <br>

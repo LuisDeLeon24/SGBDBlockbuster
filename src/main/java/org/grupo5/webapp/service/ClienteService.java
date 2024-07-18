@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.grupo5.webapp.model.Cliente;
+import org.grupo5.webapp.model.Membresia;
 import org.grupo5.webapp.util.JPAUtil;
 
 public class ClienteService implements IClienteService {
@@ -40,8 +41,7 @@ public class ClienteService implements IClienteService {
 
     @Override
     public Cliente buscarClienteId(int clienteId) {
-        Cliente cliente = null;
-        return cliente;
+        return em.find(Cliente.class, clienteId);
     }
 
     @Override
