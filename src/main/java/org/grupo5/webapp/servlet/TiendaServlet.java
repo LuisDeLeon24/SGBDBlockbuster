@@ -33,7 +33,21 @@ public class TiendaServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         List<String> tiendasList = new ArrayList<>();
+        
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarTienda(req,resp);
+        }else{
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+        
+        
+        
+        
+        /*List<String> tiendasList = new ArrayList<>();
         int tiendaId = Integer.parseInt(req.getParameter("tiendaId"));
         String direccion = req.getParameter("direccion");
         String ciudad = req.getParameter("ciudad");
@@ -51,9 +65,23 @@ public class TiendaServlet extends HttpServlet {
         }
         if (tematica.isBlank()) {
             tiendasList.add("tiendaId: " + tematica);
+
         }
     }
     
+
+        }*/
+    }
+    
+    public void agregarTienda(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+        String direccion = req.getParameter("direccion");
+        String ciudad = req.getParameter("ciudad");
+        String tematica = req.getParameter("tematica");
+        
+        tiendaService.agregarTienda(new Tienda(direccion,ciudad,tematica));
+        resp.sendRedirect(req.getContextPath() + "/");
+    }
+
     
 
 }

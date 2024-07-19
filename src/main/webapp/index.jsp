@@ -46,7 +46,7 @@
                                     Tiendas
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                    <li><a class="dropdown-item" href="./Tienda/form-tienda/form-tienda.jsp">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="./tienda-servlet">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>

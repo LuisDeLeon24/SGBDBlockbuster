@@ -19,6 +19,7 @@ create table Tiendas(
     primary key PK_tiendaId(tiendaId)
 );
 
+
 create table Empleados(
 	empleadoId int not null auto_increment,
     nombreEmpleado varchar(100),
@@ -84,6 +85,7 @@ create table DetallePeliculas(
 		references Peliculas(peliculaId)
 );
 
+<<<<<<< HEAD
 -- Insertar datos en la tabla Membresias
 INSERT INTO Membresias (tipo, costo, beneficios) VALUES 
 ('Básica', 19.99, 'Acceso a contenido limitado'),

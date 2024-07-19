@@ -41,9 +41,6 @@ public class Tienda {
         this.tematica = tematica;
     }
 
-    public Tienda(String parameter) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     public long getTiendaId() {
         return tiendaId;
@@ -82,4 +79,3 @@ public class Tienda {
         return "tiendaId=" + tiendaId + ", direccion=" + direccion ;
     }
     
-}

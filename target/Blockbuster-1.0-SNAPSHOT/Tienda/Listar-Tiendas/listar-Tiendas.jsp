@@ -1,12 +1,6 @@
-<%-- 
-    Document   : formulario-Empleado
-    Created on : 17/07/2024, 21:54:44
-    Author     : robin
---%>
-
 <%@page import="org.grupo5.webapp.model.Tienda"%>
-<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import= "java.util.List" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,7 +25,7 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../index.jsp">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="./index.jsp">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,9 +48,9 @@
                                     Tiendas
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./Tienda/form-tienda/form-tienda.jsp">Agregar</a></li>
+                                    <li><a class="dropdown-item" href="#">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="./tienda-servlet">Listar</a></li>
+                                    <li><a class="dropdown-item" href="#">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Borrar</a></li>
                                     <li><hr class="dropdown-divider"></li>
@@ -150,31 +144,30 @@
                 </div>
             </div>
         </nav>
-     
-    <div class="container w-100">
-    <form class=" mt-3" action="/Blockbuster/empleado-servlet" method="post" enctype="multipart/from-data">
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="nombreEmpleado" name="nombreEmpleado" placeholder="">
-            <label for="nombreEmpleado">Nombre Del Empleado</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="puestoEmpleado" name="puestoEmpleado" placeholder="">
-            <label for="puestoEmpleado">Puesto del Empleado</label>
-        </div>
-        <div class="input-group mb-3">
-            <span class="input-group-text">Salario Q.</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" name="salario">
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="tiendaId2" name="tiendaId2" placeholder="">
-            <label for="tiendaId2">TiendaId</label>
-        </div>
-        <div>
-            <input type ="submit"class ="btn btn-outline-success" value ="agregar">
-        </div>
-    </form>
+    <center><table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Temática</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%List<Tienda> tiendas = (List) request.getAttribute("tiendas"); %>
+                <% for (Tienda tienda : tiendas) {%>
+                <tr>
+                    <th scope="row"><%=tienda.getTiendaId()%> </th>
+                    <th scope="row"><%=tienda.getDireccion()%> </th>
+                    <th scope="row"><%=tienda.getCiudad()%> </th>
+                    <th scope="row"><%=tienda.getTematica()%> </th>
+                </tr> 
 
-    </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+
+                <%  }%>
+            </tbody>
+        </table></center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
 </html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\model\Cliente.java
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\service\IEmpleadoService.java
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\util\JPAUtil.java
@@ -20,3 +21,10 @@ C:\repositorioDevelop\src\main\java\org\grupo5\webapp\service\IClienteService.ja
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\servlet\MembresiaServlet.java
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\servlet\EmpleadoServlet.java
 C:\repositorioDevelop\src\main\java\org\grupo5\webapp\model\Pelicula.java
+=======
+C:\Users\senor\OneDrive\Escritorio\Proyectos HTML\Proyecto\src\main\java\org\grupo5\webapp\model\Tienda.java
+C:\Users\senor\OneDrive\Escritorio\Proyectos HTML\Proyecto\src\main\java\org\grupo5\webapp\service\ITiendaService.java
+C:\Users\senor\OneDrive\Escritorio\Proyectos HTML\Proyecto\src\main\java\org\grupo5\webapp\util\JPAUtil.java
+C:\Users\senor\OneDrive\Escritorio\Proyectos HTML\Proyecto\src\main\java\org\grupo5\webapp\servlet\TiendaServlet.java
+C:\Users\senor\OneDrive\Escritorio\Proyectos HTML\Proyecto\src\main\java\org\grupo5\webapp\service\TiendaService.java
+>>>>>>> origin/SantiagoContreras
