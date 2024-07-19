@@ -5,6 +5,7 @@
 package org.grupo5.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.grupo5.webapp.model.Tienda;
 import org.grupo5.webapp.util.JPAUtil;
@@ -13,7 +14,7 @@ import org.grupo5.webapp.util.JPAUtil;
  *
  * @author senor
  */
-public class TiendaService implements ITiendaService{
+public class TiendaService implements ITiendaService {
 
     private EntityManager em;
 
@@ -28,7 +29,18 @@ public class TiendaService implements ITiendaService{
 
     @Override
     public void agregarTienda(Tienda tienda) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EntityTransaction transaction = em.getTransaction(); // Solicita la transaccion al em
+        try{
+            transaction.begin(); //Abre la conexion
+            em.persist(tienda);  // El agregar en sí
+            transaction.commit(); // Se hace el commit
+            
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override

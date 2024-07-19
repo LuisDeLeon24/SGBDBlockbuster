@@ -19,6 +19,7 @@ create table Tiendas(
     primary key PK_tiendaId(tiendaId)
 );
 
+
 create table Empleados(
 	empleadoId int not null auto_increment,
     nombreEmpleado varchar(100),
@@ -84,7 +85,16 @@ create table DetallePeliculas(
 		references Peliculas(peliculaId)
 );
 
-
+INSERT INTO Tiendas (direccion, ciudad, tematica) VALUES
+('123 Calle Principal', 'Ciudad A', 'Electrónica'),
+('456 Avenida Secundaria', 'Ciudad B', 'Ropa'),
+('789 Camino Tercero', 'Ciudad C', 'Juguetes'),
+('1011 Plaza Cuarta', 'Ciudad D', 'Libros'),
+('1213 Bulevar Quinto', 'Ciudad E', 'Deportes'),
+('1415 Calle Sexta', 'Ciudad F', 'Música'),
+('1617 Avenida Séptima', 'Ciudad G', 'Hogar'),
+('1819 Camino Octavo', 'Ciudad H', 'Joyería'),
+('2021 Plaza Novena', 'Ciudad I', 'Perfumes');
 
 
 
