@@ -6,6 +6,7 @@ package org.grupo5.webapp.service;
 
 import jakarta.persistence.EntityManager;
 import java.util.List;
+import org.grupo5.webapp.model.Empleado;
 import org.grupo5.webapp.model.Tienda;
 import org.grupo5.webapp.util.JPAUtil;
 
@@ -38,7 +39,7 @@ public class TiendaService implements ITiendaService{
 
     @Override
     public Tienda buscarTienda(int tiendaId) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return em.find(Tienda.class, tiendaId);
     }
 
     @Override

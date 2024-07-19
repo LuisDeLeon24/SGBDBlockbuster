@@ -26,6 +26,7 @@ public class Empleado {
     private String nombreEmpleado;
     private String puesto;
     private double salario;
+    private int tiendaId2;
     @ManyToOne
     @JoinColumn(name = "tiendaId")
     private Tienda tiendaId;
@@ -39,6 +40,14 @@ public class Empleado {
         this.salario = salario;
         this.tiendaId = tiendaId;
     }
+
+    public Empleado(String nombreEmpleado, String puesto, double salario, int tiendaId2) {
+        this.nombreEmpleado = nombreEmpleado;
+        this.puesto = puesto;
+        this.salario = salario;
+        this.tiendaId2 = tiendaId2;
+    }
+    
 
     public Empleado(long empleadoId, String nombreEmpleado, String puesto, double salario, Tienda tiendaId) {
         this.empleadoId = empleadoId;
@@ -91,15 +100,20 @@ public class Empleado {
         this.tiendaId = tiendaId;
     }
 
+    public int getTiendaId2() {
+        return tiendaId2;
+    }
+
+    public void setTiendaId2(int tiendaId2) {
+        this.tiendaId2 = tiendaId2;
+    }
+    
+    
     @Override
     public String toString() {
         return "Empleado{" + "empleadoId=" + empleadoId + ", nombreEmpleado=" + nombreEmpleado + ", puesto=" + puesto + ", salario=" + salario + ", tiendaId=" + tiendaId.getDireccion() + '}';
     }
 
     
-    
-    
-    
-    
-    
+
 }
