@@ -7,7 +7,7 @@
                   maxIdle="30" 
                   maxWaitMillis="10000"
                   username="root" 
-                  password="dulce" 
+                  password="admin" 
                   driverClassName="com.mysql.cj.jdbc.Driver"
                   url="jdbc:mysql://localhost:3306/SGBDBlockbuster?serverTimezone=GMT-6"/> <!--El servetTimezone es la zona horaria de guatemala-->
     <!--Cambiar el usuario y la contraseña-->

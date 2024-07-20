@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 org\grupo5\webapp\model\Empleado.class
 org\grupo5\webapp\model\Tienda.class
 org\grupo5\webapp\service\EmpleadoService.class
@@ -20,10 +19,4 @@ org\grupo5\webapp\servlet\MembresiaServlet.class
 org\grupo5\webapp\model\Cliente.class
 org\grupo5\webapp\service\IMembresiaService.class
 org\grupo5\webapp\servlet\EmpleadoServlet.class
-=======
-org\grupo5\webapp\servlet\TiendaServlet.class
-org\grupo5\webapp\service\ITiendaService.class
-org\grupo5\webapp\service\TiendaService.class
-org\grupo5\webapp\model\Tienda.class
->>>>>>> origin/SantiagoContreras
 org\grupo5\webapp\util\JPAUtil.class

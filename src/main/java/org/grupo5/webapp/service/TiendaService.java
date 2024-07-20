@@ -8,7 +8,6 @@ import jakarta.persistence.EntityManager;
 import java.util.List;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;
->>>>>>> origin/SantiagoContreras
 import org.grupo5.webapp.model.Tienda;
 import org.grupo5.webapp.util.JPAUtil;
 

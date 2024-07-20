@@ -78,4 +78,5 @@ public class Tienda {
     public String toString() {
         return "tiendaId=" + tiendaId + ", direccion=" + direccion ;
     }
+}
     
