@@ -30,12 +30,21 @@ public class EmpleadoService implements IEmpleadoService {
     @Override
     public void agregarEmpleado(Empleado empleado) {
         EntityTransaction transaction = em.getTransaction();
+<<<<<<< HEAD
         try {
             transaction.begin();
             em.persist(empleado);
             transaction.commit();
         } catch (Exception e) {
             if (transaction.isActive()) {
+=======
+        try{
+            transaction.begin();
+            em.persist(empleado);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+>>>>>>> RobbinSisimit
                 transaction.rollback();
             }
             e.printStackTrace();

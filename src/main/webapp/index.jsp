@@ -78,7 +78,11 @@
                                     Empleados
                                 </a>
                                 <ul class="dropdown-menu">
+<<<<<<< HEAD
                                     <li><a class="dropdown-item" href="./empleado-servlet?parametro=1">Agregar</a></li>
+=======
+                                    <li><a class="dropdown-item" href="./Empleados/formulario-Empleado/formulario-Empleado.jsp">Agregar</a></li>
+>>>>>>> RobbinSisimit
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="./empleado-servlet?parametro=2">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>

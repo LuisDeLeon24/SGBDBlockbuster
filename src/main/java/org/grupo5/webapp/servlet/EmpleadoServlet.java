@@ -95,4 +95,10 @@ public class EmpleadoServlet extends HttpServlet {
         resp.sendRedirect(req.getContextPath() + "/");
 
     }
+    public void agregarEmpleado(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        String nombre = req.getParameter("nombreEmpleado");
+        String puesto = req.getParameter("puestoEmpleado");
+        double salario = Double.parseDouble(req.getParameter("salario"));
+        //Tienda tienda = new (getParameter("tiendaId"));//
+    }
 }

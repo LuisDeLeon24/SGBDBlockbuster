@@ -78,7 +78,7 @@
                                     Empleados
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Agregar</a></li>
+                                    <li><a class="dropdown-item" href="./Empleados/formulario-Empleado/formulario-Empleado.jsp">Agregar</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="#">Listar</a></li>
                                     <li><hr class="dropdown-divider"></li>
