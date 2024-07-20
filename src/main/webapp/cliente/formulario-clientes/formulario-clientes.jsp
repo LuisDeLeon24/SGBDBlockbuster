@@ -90,21 +90,6 @@
                         <textarea class="form-control" placeholder="Leave a comment here" id="membresiaId" name="membresiaId"></textarea>
                         <label for="floatingTextarea">Membresia</label>
                     </div>
-
-                    <div class="form-floating">
-                        <select class="form-select" id="membresiaId" aria-label="Floating label select example">
-                            <option selected>Membresias</option>
-                            <%List<Cliente> clientes = (List) request.getAttribute("clientes"); %>
-                            <% for (Cliente cliente : clientes) {%>
-                            <option><%=cliente.getNombreCliente()%></option>           
-                            <% }%>
-                        </select>
-                        <label for="floatingSelect">Seleccione su membresia</label>
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
                     <div>
                         <button type="submit" class="btn btn-dark">Ingresar</button>
                     </div>
